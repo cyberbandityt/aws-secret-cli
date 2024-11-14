@@ -8,8 +8,7 @@
     "aws-secret-cli": "dist/cli.js"
   },
   "scripts": {
-    "build": "rimraf dist && tsc && chmod +x bin/aws-secrets",
-    "postinstall": "chmod +x bin/aws-secrets",
+    "build": "rimraf dist && tsc",
     "dev": "node --loader ts-node/esm src/cli.ts",
     "prepare": "npm run build"
   },
