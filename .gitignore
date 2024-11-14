@@ -1,0 +1,8 @@
+yarn.lock
+node_modules/
+dist/
+dist
+package-lock.json
+notes.txt
+.env
+.secrets-config.json
