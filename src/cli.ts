@@ -9,7 +9,7 @@ const program = new Command();
 
 // Add version and description
 program
-  .name('aws-secrets')
+  .name('aws-secret-cli')
   .description('AWS Secrets Manager CLI with .env integration')
   .version('1.0.0');
 
@@ -31,7 +31,7 @@ program.hook('preAction', (command) => {
   const config = configManager.read();
 
   if (!config.region || !config.secretName) {
-    console.error(chalk.red('Configuration not found. Please run: aws-secrets init'));
+    console.error(chalk.red('Configuration not found. Please run: aws-secret-cli init'));
     process.exit(1);
   }
 });

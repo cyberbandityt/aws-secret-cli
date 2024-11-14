@@ -158,12 +158,12 @@ export function initCommand(program: Command): void {
           console.log(chalk.white(`Auth Method: ${credentialsType === 'cli' ? 'AWS CLI' : 'Manual Credentials'}`));
 
           console.log(chalk.cyan('\nYou can now use the following commands:'));
-          console.log(chalk.white('  aws-secrets list'));
-          console.log(chalk.white('  aws-secrets add KEY VALUE'));
-          console.log(chalk.white('  aws-secrets get KEY'));
-          console.log(chalk.white('  aws-secrets remove KEY'));
-          console.log(chalk.white('  aws-secrets write'));
-          console.log(chalk.white('  aws-secrets sync'));
+          console.log(chalk.white('  aws-secret-cli list'));
+          console.log(chalk.white('  aws-secret-cli add KEY VALUE'));
+          console.log(chalk.white('  aws-secret-cli get KEY'));
+          console.log(chalk.white('  aws-secret-cli remove KEY'));
+          console.log(chalk.white('  aws-secret-cli write'));
+          console.log(chalk.white('  aws-secret-cli sync'));
         } else {
           console.error(chalk.red('\nFailed to save configuration'));
           process.exit(1);

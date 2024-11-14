@@ -14,34 +14,34 @@ A command-line interface tool for managing AWS Secrets Manager with .env file in
 ## Installation
 
 ```bash
-npm install -g aws-secrets-cli
+npm install -g aws-secret-cli
 ```
 
 ## Quick Start
 
 1. Initialize the configuration:
 ```bash
-aws-secrets init
+aws-secret-cli init
 ```
 
 2. Add a secret:
 ```bash
-aws-secrets add DATABASE_URL "postgresql://user:pass@localhost:5432/db"
+aws-secret-cli add DATABASE_URL "postgresql://user:pass@localhost:5432/db"
 ```
 
 3. List all secrets:
 ```bash
-aws-secrets list
+aws-secret-cli list
 ```
 
 4. Write secrets to .env file:
 ```bash
-aws-secrets write
+aws-secret-cli write
 ```
 
 5. Sync from .env to AWS:
 ```bash
-aws-secrets sync
+aws-secret-cli sync
 ```
 
 ## Commands
@@ -49,13 +49,13 @@ aws-secrets sync
 ### `init`
 Initialize AWS Secrets Manager configuration
 ```bash
-aws-secrets init
+aws-secret-cli init
 ```
 
 ### `add`
 Add or update a secret
 ```bash
-aws-secrets add KEY VALUE [options]
+aws-secret-cli add KEY VALUE [options]
 Options:
   -e, --environment <env>   environment (dev/staging/prod) (default: "dev")
   --write                   write to .env file after adding (default: false)
@@ -64,13 +64,13 @@ Options:
 ### `get`
 Get a secret value
 ```bash
-aws-secrets get KEY
+aws-secret-cli get KEY
 ```
 
 ### `remove`
 Remove a secret
 ```bash
-aws-secrets remove KEY [options]
+aws-secret-cli remove KEY [options]
 Options:
   --write   write to .env file after removing (default: false)
 ```
@@ -78,7 +78,7 @@ Options:
 ### `list`
 List all secrets
 ```bash
-aws-secrets list [options]
+aws-secret-cli list [options]
 Options:
   -v, --values   show secret values (default: false)
 ```
@@ -86,7 +86,7 @@ Options:
 ### `write`
 Write secrets to .env file
 ```bash
-aws-secrets write [options]
+aws-secret-cli write [options]
 Options:
   -e, --environment <env>   environment (default: "development")
   -f, --filename <file>     output filename (default: ".env")
@@ -95,7 +95,7 @@ Options:
 ### `sync`
 Sync secrets from .env file to AWS Secrets Manager
 ```bash
-aws-secrets sync [options]
+aws-secret-cli sync [options]
 Options:
   -f, --filename <file>   input filename (default: ".env")
   -m, --mode <mode>       sync mode (merge/overwrite) (default: "merge")

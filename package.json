@@ -1,18 +1,17 @@
 {
-  "name": "aws-secrets",
-  "version": "1.0.0",
+  "name": "aws-secret-cli",
+  "version": "1.0.1",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "aws-secrets": "dist/cli.js"
+    "aws-secret-cli": "dist/cli.js"
   },
   "scripts": {
     "build": "rimraf dist && tsc && chmod +x bin/aws-secrets",
     "postinstall": "chmod +x bin/aws-secrets",
     "dev": "node --loader ts-node/esm src/cli.ts",
     "prepare": "npm run build"
-    
   },
   "keywords": [
     "aws",
@@ -46,10 +45,10 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   },
-    "files": [
-      "dist",
-      "bin",
-      "README.md",
-      "LICENSE"
-    ]
+  "files": [
+    "dist",
+    "bin",
+    "README.md",
+    "LICENSE"
+  ]
 }
