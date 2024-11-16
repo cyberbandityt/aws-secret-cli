@@ -11,15 +11,14 @@ const program = new Command();
 program
   .name('aws-secret-cli')
   .description('AWS Secrets Manager CLI with .env integration')
-  .version('1.0.0');
+  .version('1.0.3');
 
 // Register commands first
 initCommand(program);
 secretsCommands(program);
 
 // Add pre-action hook for config check
-program.hook('preAction', (command) => {
-  // Get the actual command from args
+program.hook('preAction', () => {
   const commandName = program.args[0];
   
   // Skip check for these commands

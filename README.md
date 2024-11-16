@@ -1,4 +1,4 @@
-# AWS Secrets CLI
+# AWS Secret CLI
 
 A command-line interface tool for managing AWS Secrets Manager with .env file integration.
 
@@ -143,8 +143,7 @@ The tool provides detailed error messages and validation:
 5. Use meaningful secret names
 
 ## Contributing
-
-1. Fork the repository
+1. Fork the [repository](https://github.com/cyberbandityt/aws-secret-cli)
 2. Create your feature branch
 3. Commit your changes
 4. Push to the branch

@@ -123,7 +123,6 @@ export function secretsCommands(program: Command): void {
             const awsManager = getAwsManager();
             const secrets = await awsManager.getSecrets();
             await EnvManager.writeEnvFile(secrets, options.environment, options.filename);
-            // Continuing src/commands/secrets.ts
 
         spinner.succeed(chalk.green(`Successfully wrote secrets to ${options.filename}`));
     } catch (error) {
